@@ -1,10 +1,13 @@
-const taskContent = document.getElementById('taskContent');
-const addButton = document.getElementById('addTask');
+const taskContent = document.getElementById('taskContent')
+const addButton = document.getElementById('addButton')
 const taskList = document.getElementById('taskList')
 
-class Task {
+let tasks = []
+
+class task {
     constructor(content) {
         this.content = content
+        this.completed = false
         this.fav = false
         this.link = ''
     }
@@ -26,3 +29,19 @@ class Task {
 
     }
 }
+class tasklisthtml {
+    purge(){
+        taskList.innerHTML = ''
+    }
+    fill(){
+        if (tasks.length > 0) {
+            for (x of tasks) {
+                taskList.innerHTML += 
+            }
+        }
+    }
+}
+
+addButton.addEventListener('click',() => {
+    tasks.push(new task(taskContent.value))
+})
