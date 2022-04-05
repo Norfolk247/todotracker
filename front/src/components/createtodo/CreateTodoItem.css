@@ -1,0 +1,45 @@
+.wrapper {
+    vertical-align: center;
+    margin: 5px;
+    background: white;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 5% 80% 15%;
+    grid-template-rows: 50% 50%;
+    gap: 0px 0px;
+    grid-template-areas:
+    "checkbox title icon-buttons"
+    "checkbox description icon-buttons";
+    /*vertical-align: middle;*/
+}
+.checkbox {
+    grid-area: checkbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    grid-area: title;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+.description {
+    grid-area: description;
+    text-align: left;
+}
+.icon-buttons {
+    grid-area: icon-buttons;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.modal_text {
+    background-color: white;
+    margin: 5px;
+}
+
+.imageBtn {
+    cursor: pointer;
+}
