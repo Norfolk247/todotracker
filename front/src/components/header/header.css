@@ -34,15 +34,14 @@
 }
 
 .login-menu {
-    width: 320px;
-    height: 180px;
+    width: 250px;
     background-color: #ffffff;
     position: fixed;
     right: 0;
     box-shadow: -3px 4px 4px 1px rgb(0 0 0 / 15%);
     pointer-events: none;
     opacity: 0;
-    padding: 5px;
+    padding: 15px;
     transition: 0.2s;
 }
 .login-menu.active {
@@ -58,6 +57,9 @@
     display: block;
     pointer-events: all;
 }
+.login-stage.active button {
+    margin: 3px;
+}
 
 .logout-stage {
     display: none;
@@ -66,4 +68,7 @@
 .logout-stage.active {
     display: block;
     pointer-events: all;
+}
+.logout-btn {
+    text-align: right;
 }

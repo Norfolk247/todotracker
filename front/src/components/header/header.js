@@ -59,13 +59,14 @@ const Header = ({setTasks,isLogged,setLogged}) => {
                 </div>
                 <div className={isLogged?'logout-stage active':'logout-stage'}>
                     {_login}
-                    <br/>
-                    <button onClick={()=>{
-                        setLogin('')
-                        setPassword('')
-                        setLogged(false)
-                        localStorage.removeItem('token')
-                    }}>Выйти</button>
+                    <div className='logout-btn'>
+                        <button onClick={()=>{
+                            setLogin('')
+                            setPassword('')
+                            setLogged(false)
+                            localStorage.removeItem('token')
+                        }}>Выйти</button>
+                    </div>
                 </div>
             </div>
         </div>

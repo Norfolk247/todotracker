@@ -20,9 +20,9 @@ const TaskInput = ({setTasks,isLogged}) => {
         <div className='taskInput'>
             <div hidden={hidden}>
                 <input value={name} onChange={e=>setName(e.target.value)}/>
-                <br/>
+                <div className={`name ${name === '' ? 'active' : ''}`}>Имя</div>
                 <input value={description} onChange={e=>setDescription(e.target.value)}/>
-                <br/>
+                <div className={`description ${description === '' ? 'active'    : ''}`}>Описание</div>
                 <button onClick={async ()=> {
                     if (name) {
                         await create(name, description)

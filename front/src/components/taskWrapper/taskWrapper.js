@@ -1,7 +1,7 @@
 import './taskWrapper.css'
 import React, {useState} from 'react';
 import TaskInput from "../taskInput/taskInput";
-import Filter from "../filter/filter";
+import Filter from "../../filter/filter";
 import Task from "../task/task";
 import {getAll} from "../../http/tasksAPI";
 
